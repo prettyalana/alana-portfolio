@@ -16,8 +16,7 @@ body {
   font-weight: 900;
 }
 
-.bio,
-h1 {
+.bio {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -53,7 +52,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.hobbies {
+.interests {
   margin: 80px 0 80px;
   text-align: center;
 }
