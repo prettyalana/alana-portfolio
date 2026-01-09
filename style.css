@@ -130,6 +130,9 @@ body {
 .flickity-prev-next-button:disabled {
   display: none;
 }
+.projects-header {
+  text-align: center;
+}
 
 .thumbnail {
   height: 3.125rem;
