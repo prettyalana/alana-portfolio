@@ -9,6 +9,9 @@ body {
   padding-top: 40px;
   background: url("https://images.unsplash.com/photo-1516642898673-edd1ced08e87?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 1rem 1.25rem;
   font-family: "Raleway Dots", sans-serif;
   display: flex;
   flex-direction: column;
