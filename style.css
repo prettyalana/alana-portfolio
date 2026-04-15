@@ -206,8 +206,8 @@ footer {
   overflow: hidden;
 }
 
-/* Each petal wrapper */
-.petal {
+/* Each season wrapper */
+.season {
   position: absolute;
   top: -50px;  /* Start above screen */
   animation: fall linear infinite;
@@ -241,26 +241,26 @@ footer {
   }
 }
 
-/* Different timing for each petal */
-.petal:nth-child(1) {
+/* Different timing for each season */
+.season:nth-child(1) {
   left: 15%;
   animation-duration: 10s;
   animation-delay: 0s;
 }
 
-.petal:nth-child(2) {
+.season:nth-child(2) {
   left: 40%;
   animation-duration: 12s;
   animation-delay: 2s;
 }
 
-.petal:nth-child(3) {
+.season:nth-child(3) {
   left: 65%;
   animation-duration: 8s;
   animation-delay: 4s;
 }
 
-.petal:nth-child(4) {
+.season:nth-child(4) {
   left: 85%;
   animation-duration: 11s;
   animation-delay: 1s;
