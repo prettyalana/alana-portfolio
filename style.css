@@ -12,8 +12,6 @@ body {
   background-size: cover;
   backdrop-filter: blur(4px);
   font-family: "Raleway", sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
 }
 
 .bio {
