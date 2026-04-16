@@ -3,10 +3,10 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  padding-top: 40px;
   background: url("https://images.unsplash.com/photo-1516642898673-edd1ced08e87?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,9 +14,9 @@ body {
   -webkit-backdrop-filter: blur(4px);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
   font-family: "Raleway Dots", sans-serif;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   font-weight: 900;
   font-size: 1rem;
 }
@@ -33,16 +33,22 @@ body {
   margin-bottom: 50px;
 }
 
-.items {
-  width: 95%;
+.page {
+  display: flex;
+  justify-content: center;
 }
 
-@media (min-width: 600px ) {
+/* .items {
+  display: flex;
+  flex-direction: column;
+} */
+
+/* @media (min-width: 600px) {
   .items {
     max-width: 600px;
     flex-grow: 1;
   }
-}
+} */
 
 .banner-image {
   width: 12.5rem;
@@ -97,9 +103,16 @@ body {
   transform: scale(0.85);
   -webkit-filter: blur(5px);
   filter: blur(5px);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s,
-    -webkit-filter 0.3s, filter 0.3s;
-  transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+  -webkit-transition:
+    opacity 0.3s,
+    -webkit-transform 0.3s,
+    transform 0.3s,
+    -webkit-filter 0.3s,
+    filter 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s,
+    filter 0.3s;
 }
 
 .carousel-cell.is-selected img {
@@ -209,13 +222,13 @@ footer {
 /* Each season wrapper */
 .season {
   position: absolute;
-  top: -50px;  /* Start above screen */
+  top: -50px; /* Start above screen */
   animation: fall linear infinite;
 }
 
 /* The actual SVG image */
 .falling-svg {
-  width: 30px;      /* Adjust size as needed */
+  width: 30px; /* Adjust size as needed */
   height: 30px;
   /* opacity: 0.8; */
 }
@@ -269,11 +282,42 @@ footer {
 h3 {
   text-align: center;
   margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .case-studies {
   margin-bottom: 2.5rem;
 }
+
+.menu-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  padding: 1.5rem;
+  background: rgb(249, 156, 198);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.section-header-wrapper {
+  text-align: center;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+@media (max-width: 580px) {
+  .menu-container {
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
 
 @media (max-width: 450px) {
   footer {

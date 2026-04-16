@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandiflora+One&family=Raleway+Dots&display=swap");
+
+body.about {
+  background: rgb(248, 179, 210);
+  background-size: cover;
+  width: auto;
+  overflow-x: hidden;
+  margin-top: 2.5rem;
+  font-family: "Raleway Dots", sans-serif;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.section-header-wrapper {
+  text-align: center;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px 50px 40px;
+}
+
+.about-me-content {
+  margin-top: 20px;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-content,
+.work-history,
+.education-information {
+  font-size: large;
+  line-height: 2;
+  margin-bottom: 50px;
+}
