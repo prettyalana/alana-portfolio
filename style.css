@@ -32,7 +32,7 @@ body {
 }
 
 .items {
-  margin: 0 .75rem 0 .75rem;
+  margin: 0 0.75rem 0 0.75rem;
 }
 
 .banner-image {
@@ -288,7 +288,6 @@ h3 {
   text-align: center;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -298,7 +297,7 @@ a {
 }
 
 body.experience {
-  background: pink;
+  background: rgb(249, 156, 198);
   margin-top: 1.5rem;
 }
 
@@ -306,19 +305,146 @@ body.experience {
   padding-left: 1.5rem;
 }
 
-.work-history{
-  list-style: none;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: large;
-  line-height: 2;
-  margin-bottom: 50px;
+.previous-work-header {
+  margin-bottom: 2.5rem;
 }
 
+.work-history {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 5rem 1.25rem;
+  font-size: large;
+  line-height: 2;
+}
 
+.work-history::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(248, 227, 230);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(249, 156, 198);
+  border: 4px solid rgb(248, 227, 230);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the timeline-item to the left */
+.left {
+  left: 0;
+}
+
+/* Place the timeline-item to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left timeline-item (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(248, 227, 230);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(248, 227, 230);
+}
+
+/* Add arrows to the right timeline-item (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(248, 227, 230);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(248, 227, 230) transparent transparent;
+}
+
+/* Fix the circle for timeline-items on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 1.25rem 1.875rem;
+  background-color: rgb(248, 227, 230);
+  position: relative;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.content:hover {
+  box-shadow:
+    0 0 0.625rem rgb(248, 227, 230),
+    0 0 1.25rem rgb(248, 227, 230),
+    0 0 1.875rem rgb(248, 227, 230);
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+  /* Place the timelime to the left */
+  .work-history::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .timeline-item::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    display: none;
+  }
+
+  /* Make all right timeline-items behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
 
 @media (max-width: 580px) {
   .menu-container {
@@ -330,7 +456,6 @@ body.experience {
     flex-wrap: wrap;
   }
 }
-
 
 @media (max-width: 450px) {
   footer {

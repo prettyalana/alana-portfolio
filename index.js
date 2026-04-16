@@ -93,16 +93,34 @@ const workHistory = [
 ];
 
 function populateWorkExperience() {
-  let content = document.querySelector(".content");
 
-  workHistory.forEach((job) => {
+  // let content = document.querySelector(".content");
+  let workHistoryContainer = document.querySelector(".work-history")
+
+  workHistory.forEach((job, index) => {
+
+    const div = document.createElement("div");
+
+    div.classList.add("timeline-item")
+
+    if (index % 2 == 0) {
+      div.classList.add("left")
+    }
+    else {
+      div.classList.add("right")
+    }
+
+    const innerDiv = document.createElement("div")
+
+    innerDiv.classList.add("content")
+
     let header = document.createElement("h3");
 
     header.className = "company";
 
     header.textContent = job.company;
 
-    content.appendChild(header);
+    innerDiv.append(header);
 
     let em = document.createElement("em");
 
@@ -110,22 +128,24 @@ function populateWorkExperience() {
 
     em.textContent = job.role_and_dates;
 
-    content.appendChild(em);
+    innerDiv.append(em);
 
     let ul = document.createElement("ul");
 
-    job["job_functions"].forEach((jobFunction) => {
+    job.job_functions.forEach((jobFunction) => {
       let li = document.createElement("li");
 
       li.className = "job-function";
 
       li.textContent = jobFunction;
 
-      ul.appendChild(li);
+      ul.append(li);
 
     });
 
-    content.appendChild(ul);
+    innerDiv.append(ul);
+    div.append(innerDiv);
+    workHistoryContainer.append(div);
   });
 }
 
