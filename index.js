@@ -125,8 +125,9 @@ function populateWorkExperience() {
 
       ul.appendChild(li);
 
-      content.appendChild(ul);
     });
+
+    content.appendChild(ul);
   });
 }
 

@@ -39,8 +39,7 @@ body {
 }
 
 /* .items {
-  display: flex;
-  flex-direction: column;
+  width: 50%;
 } */
 
 /* @media (min-width: 600px) {
@@ -307,6 +306,32 @@ h3 {
 a {
   text-decoration: none;
 }
+
+.social-icons i {
+  font-size: x-large;
+}
+
+body.experience {
+  background: pink;
+  margin-top: 1.5rem;
+}
+
+.content ul {
+  padding-left: 1.5rem;
+}
+
+.work-history{
+  list-style: none;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+
 
 
 @media (max-width: 580px) {
