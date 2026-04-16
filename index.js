@@ -12,7 +12,7 @@ const snowflakeAssets = [
 
 function seasonsChange() {
   const month = new Date().getMonth() + 1;
-  
+
   if (winterMonths.includes(month)) {
     // Set the src to one of the randomly chosen images
     document.querySelectorAll(".falling-svg").forEach((flake) => {
@@ -93,26 +93,23 @@ const workHistory = [
 ];
 
 function populateWorkExperience() {
-
   // let content = document.querySelector(".content");
-  let workHistoryContainer = document.querySelector(".work-history")
+  let workHistoryContainer = document.querySelector(".work-history");
 
   workHistory.forEach((job, index) => {
-
     const div = document.createElement("div");
 
-    div.classList.add("timeline-item")
+    div.classList.add("timeline-item");
 
     if (index % 2 == 0) {
-      div.classList.add("left")
-    }
-    else {
-      div.classList.add("right")
+      div.classList.add("left");
+    } else {
+      div.classList.add("right");
     }
 
-    const innerDiv = document.createElement("div")
+    const innerDiv = document.createElement("div");
 
-    innerDiv.classList.add("content")
+    innerDiv.classList.add("content");
 
     let header = document.createElement("h3");
 
@@ -140,7 +137,6 @@ function populateWorkExperience() {
       li.textContent = jobFunction;
 
       ul.append(li);
-
     });
 
     innerDiv.append(ul);
