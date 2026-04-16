@@ -1,11 +1,7 @@
-const month = new Date().getMonth() + 1;
-
-const winterMonths = [12, 1, 2];
+winterMonths = [12, 1, 2];
 const springMonths = [3, 4, 5];
 const summerMonths = [6, 7, 8];
 const fallMonths = [9, 10, 11];
-
-const seasons = ["winter", "spring", "summer", "fall"];
 
 // snowflake images
 const snowflakeAssets = [
@@ -15,6 +11,8 @@ const snowflakeAssets = [
 ];
 
 function seasonsChange() {
+  const month = new Date().getMonth() + 1;
+  
   if (winterMonths.includes(month)) {
     // Set the src to one of the randomly chosen images
     document.querySelectorAll(".falling-svg").forEach((flake) => {
@@ -102,7 +100,7 @@ function populateWorkExperience() {
 
     header.className = "company";
 
-    header.textContent = job["company"];
+    header.textContent = job.company;
 
     content.appendChild(header);
 
@@ -110,7 +108,7 @@ function populateWorkExperience() {
 
     em.className = "role-and-dates";
 
-    em.textContent = job["role_and_dates"];
+    em.textContent = job.role_and_dates;
 
     content.appendChild(em);
 
