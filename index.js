@@ -93,7 +93,6 @@ const workHistory = [
 ];
 
 function populateWorkExperience() {
-  // let content = document.querySelector(".content");
   let workHistoryContainer = document.querySelector(".work-history");
 
   workHistory.forEach((job, index) => {
