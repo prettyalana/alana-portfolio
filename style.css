@@ -213,9 +213,8 @@ footer {
 
 /* The actual SVG image */
 .falling-svg {
-  width: 30px; /* Adjust size as needed */
+  width: 30px;
   height: 30px;
-  /* opacity: 0.8; */
 }
 
 /* Animation */
@@ -430,6 +429,7 @@ body.experience {
   .timeline-item::before {
     left: 60px;
     border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(248, 227, 230) transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
