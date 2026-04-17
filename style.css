@@ -486,10 +486,6 @@ body.experience {
   .menu-content a:hover {
     background: rgb(249, 156, 198);
   }
-
-  .social-icons i {
-    font-size: large;
-  }
 }
 
 @media (max-width: 450px) {
