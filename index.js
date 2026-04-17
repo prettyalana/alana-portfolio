@@ -144,4 +144,25 @@ function populateWorkExperience() {
   });
 }
 
-populateWorkExperience();
+if (document.querySelector(".work-history")) {
+  populateWorkExperience();
+}
+
+function dropdownAnimation() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".menu-button");
+    button.addEventListener("click", function (event) {
+      const activeState = document.querySelector(".menu-content");
+
+      const icon = document.querySelector("i");
+
+      if (activeState.classList.toggle("is-active")) {
+        icon.classList.replace("fa-bars", "fa-x");
+      } else if (activeState) {
+        icon.classList.replace("fa-x", "fa-bars");
+      }
+    });
+  });
+}
+
+dropdownAnimation();
