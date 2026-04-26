@@ -166,3 +166,30 @@ function dropdownAnimation() {
 }
 
 dropdownAnimation();
+
+function switchModes() {
+
+  let darkMode = document.getElementById("theme-toggle");
+  
+  darkMode.addEventListener("click", function (event) {
+      let theme = document.documentElement.getAttribute('data-theme');
+
+      let button = document.querySelector("#theme-toggle");
+
+      let icon = button.querySelector("i");
+
+      if (theme === "light") {
+        document.documentElement.setAttribute("data-theme", "dark")
+
+        icon.classList.replace("fa-moon", "fa-sun");
+      }
+      else {
+        let lightMode = document.documentElement.setAttribute("data-theme", "light")
+
+        icon.classList.replace("fa-sun", "fa-moon");
+      }
+    });
+
+}
+
+switchModes();

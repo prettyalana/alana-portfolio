@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway&display=swap");
 
+:root {
+  --bg-image: url("https://images.unsplash.com/photo-1516642898673-edd1ced08e87?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  --text-color: #000000;
+  --main-color: rgb(249, 156, 198);
+}
+
+[data-theme="dark"] {
+  --bg-image: #0b1f3b;
+  --main-color: var(--bg-image);
+  --text-color: rgb(248, 227, 230);
+  --border-color: var(--text-color);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +20,12 @@
 }
 
 body {
-  background: url("https://images.unsplash.com/photo-1516642898673-edd1ced08e87?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background: var(--bg-image);
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(4px);
   font-family: "Raleway", sans-serif;
+  color: var(--text-color);
 }
 
 .bio {
@@ -145,7 +159,7 @@ body {
 }
 
 .link a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   text-align: center;
   flex-grow: 1;
@@ -154,13 +168,21 @@ body {
 .link {
   display: flex;
   align-items: center;
-  background: rgb(249, 156, 198);
+  background: var(--main-color);
   border-radius: 100px;
   padding: 5px;
 }
 
 .link:hover {
   background: rgb(248, 227, 230);
+}
+
+[data-theme="dark"] .link {
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .link:hover a {
+  color: var(--main-color);
 }
 
 .name {
@@ -185,7 +207,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(249, 156, 198);
+  background: var(--main-color);
   opacity: 0.5;
   width: 100%;
   height: 50px;
@@ -277,9 +299,10 @@ h3 {
   display: flex;
   justify-content: flex-end;
   padding: 1.5rem;
-  background: rgb(249, 156, 198);
+  background: var(--main-color);
   width: 100%;
   margin-bottom: 2rem;
+  gap: 1.5rem;
 }
 
 .menu-content {
@@ -294,10 +317,12 @@ h3 {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 .social-icons i {
   font-size: x-large;
+  color: var(--text-color);
 }
 
 body.experience {
@@ -486,6 +511,10 @@ body.experience {
   .menu-content a:hover {
     background: rgb(249, 156, 198);
   }
+}
+
+#theme-toggle {
+  all: unset;
 }
 
 @media (max-width: 450px) {
