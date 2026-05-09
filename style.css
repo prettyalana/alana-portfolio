@@ -351,7 +351,7 @@ body.experience {
   content: "";
   position: absolute;
   width: 6px;
-  background-color: var(--text-color);
+  background-color: rgb(248, 227, 230);
   top: 0;
   bottom: 0;
   left: 50%;
@@ -374,8 +374,8 @@ body.experience {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: var(--main-color);
-  border: 4px solid var(--text-color);
+  background-color: rgb(248, 227, 230);
+  border: 4px solid rgb(248, 227, 230);
   top: 15px;
   border-radius: 50%;
   z-index: 1;
