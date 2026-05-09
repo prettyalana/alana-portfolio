@@ -41,6 +41,38 @@ seasonsChange();
 
 const workHistory = [
   {
+    company: "Allegion",
+    role_and_dates:
+      "Software Engineer MES, Carmel, IN May 2026 - Present",
+    job_functions: [
+      "Design and develop data-driven applications and dashboards using Power BI to support manufacturing operations and decision-making",
+      "Collaborate with cross-functional teams to translate business requirements into technical solutions",
+      "Integrate Manufacturing Execution Systems (MES) data into scalable reporting and analytics solutions",
+      "Build and maintain automated data pipelines and workflows to streamline reporting and reduce manual processes"
+    ],
+  },
+  {
+    "company": "Creating Coding Careers",
+    "role_and_dates": "Instructor – Student Support (Contract, Part Time), Remote February 2026 - Present",
+    "job_functions": [
+      "Teach full-stack web development concepts including HTML, CSS, JavaScript, and React to adult students of varying technical backgrounds",
+      "Mentor students through debugging, project architecture decisions, and implementation of industry best practices",
+      "Assess student projects and provide structured, actionable technical feedback to improve code quality and problem-solving skills",
+      "Collaborate with instructors and leadership to refine curriculum materials and enhance student learning outcomes"
+    ]
+  },
+  {
+    "company": "UX Woman",
+    "role_and_dates": "UX Apprentice, Remote February 2026 - Present",
+    "job_functions": [
+      "Selected as 1 of 2 participants for the highly competitive UX Woman Spring 2026 UX Apprenticeship",
+      "Leading an end-to-end UX project for a startup concept, from discovery research through wireframing, prototyping, and iteration",
+      "Conducting user discovery research and synthesizing insights to inform product and design decisions",
+      "Creating core UX deliverables including personas, journey maps, UX flows, wireframes, and prototypes",
+      "Developing business and product context through market analysis, positioning, and UX-driven product pitches"
+    ]
+  },
+  {
     company: "Meta x MLH Fellowship",
     role_and_dates:
       "Production Engineer (Site Reliability Engineer) Fellow, Remote June 2025 - September 2025",
