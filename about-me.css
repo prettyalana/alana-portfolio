@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway+Dot&s&family=Raleway&display=swap");
 
 body.about {
-  background: rgb(248, 179, 210);
+  background: var(--main-color);
   background-size: cover;
   width: auto;
   overflow-x: hidden;
