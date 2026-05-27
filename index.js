@@ -42,11 +42,11 @@ seasonsChange();
 const workHistory = [
   {
     company: "Allegion",
-    role_and_dates: "Software Engineer MES, Carmel, IN May 2026 - Present",
+    role_and_dates: "AI Software Engineer, Carmel, IN May 2026 - Present",
     job_functions: [
-      "Design and develop data-driven applications and dashboards using Power BI to support manufacturing operations and decision-making",
+      "Implement new application features and resolve critical production bugs, enhancing overall functionality and user experience ",
       "Collaborate with cross-functional teams to translate business requirements into technical solutions",
-      "Integrate Manufacturing Execution Systems (MES) data into scalable reporting and analytics solutions",
+      "Debug and resolve data and system issues, ensuring reliability and performance",
       "Build and maintain automated data pipelines and workflows to streamline reporting and reduce manual processes",
     ],
   },
