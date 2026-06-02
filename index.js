@@ -27,8 +27,8 @@ function seasonsChange() {
       petal.src = "images/cherry-blossoms.svg";
     });
   } else if (summerMonths.includes(month)) {
-    document.querySelectorAll(".falling-svg").forEach((sun) => {
-      sun.src = "images/ice-cream-1-svgrepo-com.svg";
+    document.querySelectorAll(".falling-svg").forEach((icecream) => {
+      icecream.src = "images/ice-cream-1-svgrepo-com.svg";
     });
   } else {
     document.querySelectorAll(".falling-svg").forEach((leaf) => {
