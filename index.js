@@ -28,7 +28,7 @@ function seasonsChange() {
     });
   } else if (summerMonths.includes(month)) {
     document.querySelectorAll(".falling-svg").forEach((sun) => {
-      sun.src = "images/sun.svg";
+      sun.src = "images/ice-cream-1-svgrepo-com.svg";
     });
   } else {
     document.querySelectorAll(".falling-svg").forEach((leaf) => {
