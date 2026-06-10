@@ -1,4 +1,4 @@
-winterMonths = [12, 1, 2];
+const winterMonths = [12, 1, 2];
 const springMonths = [3, 4, 5];
 const summerMonths = [6, 7, 8];
 const fallMonths = [9, 10, 11];
@@ -42,7 +42,7 @@ seasonsChange();
 const workHistory = [
   {
     company: "Allegion",
-    role_and_dates: "AI Software Engineer, Carmel, IN May 2026 - Present",
+    role_and_dates: "Software Engineer, Carmel, IN May 2026 - Present",
     job_functions: [
       "Implement new application features and resolve critical production bugs, enhancing overall functionality and user experience ",
       "Collaborate with cross-functional teams to translate business requirements into technical solutions",
