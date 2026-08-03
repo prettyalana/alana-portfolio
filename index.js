@@ -42,12 +42,14 @@ seasonsChange();
 const workHistory = [
   {
     company: "Allegion",
-    role_and_dates: "Software Engineer, Carmel, IN May 2026 - Present",
+    role_and_dates: "Software Engineer, Carmel, IN May 2026 - August 2026",
     job_functions: [
-      "Implement new application features and resolve critical production bugs, enhancing overall functionality and user experience ",
-      "Collaborate with cross-functional teams to translate business requirements into technical solutions",
-      "Debug and resolve data and system issues, ensuring reliability and performance",
-      "Build and maintain automated data pipelines and workflows to streamline reporting and reduce manual processes",
+      "Automated a manual CSV file upload process for a manufacturing application by building a direct database load that read data from AX and another internal database, reducing repetitive manual steps",
+      "Optimized the underlying database query to reduce processing time from 5 minutes to just over 1 minute",
+      "Developed new UI features and enhancements for internal manufacturing operations applications using C# and Blazor/Razor",
+      "Created and maintained Power BI reports to support manufacturing operations and evolving business needs",
+      "Updated data sources, SQL credentials, and queries across 200+ SSRS reports and Excel files, as part of a Unicel to Allegion M&A server migration",
+      "Collaborated with stakeholders to understand their needs and translated them into technical solutions within the Microsoft ecosystem (Visual Studio, Azure DevOps, C#)",
     ],
   },
   {
@@ -178,7 +180,6 @@ function dropdownAnimation() {
 dropdownAnimation();
 
 function switchModes() {
-
   let darkMode = document.getElementById("theme-toggle");
 
   // Restore saved theme
@@ -196,34 +197,28 @@ function switchModes() {
   }
 
   darkMode.addEventListener("click", function () {
+    let theme = document.documentElement.getAttribute("data-theme");
 
-      let theme = document.documentElement.getAttribute('data-theme');
+    let button = document.querySelector("#theme-toggle");
 
-      let button = document.querySelector("#theme-toggle");
+    let icon = button.querySelector("i");
 
-      let icon = button.querySelector("i");
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "dark");
 
-      if (theme === "light") {
+      icon.classList.replace("fa-moon", "fa-sun");
 
-        document.documentElement.setAttribute("data-theme", "dark");
+      // Save dark mode
+      localStorage.setItem("data-theme", "dark");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
 
-        icon.classList.replace("fa-moon", "fa-sun");
+      icon.classList.replace("fa-sun", "fa-moon");
 
-        // Save dark mode
-        localStorage.setItem("data-theme", "dark");
-
-      }
-      else {
-
-        document.documentElement.setAttribute("data-theme", "light");
-
-        icon.classList.replace("fa-sun", "fa-moon");
-
-        // Save light mode
-        localStorage.setItem("data-theme", "light");
-      }
-    });
-
+      // Save light mode
+      localStorage.setItem("data-theme", "light");
+    }
+  });
 }
 
 switchModes();
